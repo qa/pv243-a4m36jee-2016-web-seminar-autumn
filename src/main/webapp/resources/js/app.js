@@ -13,7 +13,8 @@ simpleChat.config(['$routeProvider', '$locationProvider',
     function($routeProvider, $locationProvider) {
         $routeProvider.
                 when('/', {
-                    templateUrl: 'templates/main.html'
+                    templateUrl: 'templates/main.html',
+                    controller: 'MessageCtrl'
                 });
     }
 ]);
