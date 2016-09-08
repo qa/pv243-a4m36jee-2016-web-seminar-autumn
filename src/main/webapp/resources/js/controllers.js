@@ -4,10 +4,14 @@ var simpleChatControllers = angular.module('simpleChatControllers', []);
 simpleChatControllers.controller('NewMessageCtrl', ['$scope', 'MessageService',
     function NewMessageCtrl($scope, MessageService) {
 
+
         $scope.submit = function (message) {
+
+            var date = Date.now();
             var messageData = {
                     "name": message.name,
-                    "text": message.text
+                    "text": message.text,
+                    "date": date
             };
             $scope.messageList.push(messageData);
 

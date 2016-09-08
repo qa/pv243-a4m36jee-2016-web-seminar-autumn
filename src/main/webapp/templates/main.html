@@ -34,7 +34,7 @@
         <div  ng-repeat="message in messageList">
             <div class="blog-post-outer">
                 <div class="blog-intro-text">
-                    <b>{{message.name}}:</b> {{message.text}}
+                    <b>{{message.date | date:'dd/MM HH:mm:ss'}} {{message.name}}:</b> {{message.text}}
                 </div>
             </div>
         </div>
