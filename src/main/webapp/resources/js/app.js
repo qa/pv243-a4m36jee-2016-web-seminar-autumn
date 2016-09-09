@@ -5,7 +5,8 @@
 var simpleChat = angular.module('simpleChat', [
     'ngRoute',
     'simpleChatControllers',
-    'simpleChatServices'
+    'simpleChatServices',
+    'messageDirective'
 ]);
 
 
