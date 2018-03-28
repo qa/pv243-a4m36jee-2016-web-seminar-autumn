@@ -18,4 +18,8 @@ export class AppComponent {
       }
     );
   }
+
+  public deleteMessage(i: number) {
+    this.messageList.splice(i, 1);
+  }
 }

@@ -30,9 +30,10 @@
     <div class="well">
         <dl id="chat" class="dl-horizontal">
         </dl>
-        <div *ngFor="let message of messageList">
+        <div *ngFor="let message of messageList; let i = index">
             <div class="blog-post-outer">
                 <message [data]="message"></message>
+                <a role="button" (click)="deleteMessage(i)">delete</a>
             </div>
         </div>
     </div>
