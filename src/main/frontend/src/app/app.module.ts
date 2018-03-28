@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { MessageComponent } from './message/message.component';
@@ -14,7 +14,8 @@ import { RestService } from './services/rest.service'
     MessageComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpModule
   ],
   providers: [RestService],
   bootstrap: [AppComponent]
