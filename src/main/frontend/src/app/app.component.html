@@ -1,4 +1,12 @@
 <div style="text-align:center">
-  <message></message>
-  <message></message>
+
+    <div class="well">
+        <dl id="chat" class="dl-horizontal">
+        </dl>
+        <div *ngFor="let message of messageList">
+            <div class="blog-post-outer">
+                <message [data]="message"></message>
+            </div>
+        </div>
+    </div>
 </div>
