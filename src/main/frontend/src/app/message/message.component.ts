@@ -17,7 +17,7 @@ export class MessageComponent implements OnInit {
 
 }
 
-interface Message {
+export interface Message {
   name: String,
   text: String,
   date: Number

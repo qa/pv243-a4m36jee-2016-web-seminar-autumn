@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Message } from './message/message.component'
 
 @Component({
   selector: 'app-root',
@@ -6,21 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  messageList = [
-    {
-      name: 'Pepa',
-      text: 'ahoj',
-      date: 1522158079067
-    },
-    {
-      name: 'foo',
-      text: 'zdar',
-      date: 1522158079067
-    },
-    {
-      name: 'bar',
-      text: 'cau',
-      date: 1522158079067
-    }
-  ];
+  messageList: Message[] = [];
+
+  public addMessage(name: string, text: string) {
+    this.messageList.push(
+      {
+        name: name,
+        text: text,
+        date: +new Date()
+      }
+    );
+  }
 }
